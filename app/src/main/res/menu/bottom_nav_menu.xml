@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/forward_arrow"
+        android:icon="@drawable/forward_arrow"
+        android:title="" />
+
+    <item
+        android:id="@+id/back_arrow"
+        android:icon="@drawable/back_arrow"
+        android:title=""
+
+        />
+
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/menu_icon"
+        android:title=""
+        />
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/refresh_icon"
+        android:title=""
+        />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title=""
+        />
+
+
+</menu>

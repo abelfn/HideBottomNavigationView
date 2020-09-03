@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@drawable/appbar_bottom_border">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:gravity="center_vertical"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:id="@+id/ec"
+                android:orientation="horizontal"
+                android:background="@drawable/round"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="20dp">
+                <EditText
+                    android:id="@+id/et"
+                    android:layout_width="260dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/round"
+                    android:hint="type URl"
+                    android:textColorHint="#C4C3C3"
+                    android:textColorHighlight="#C7FF00"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textColor="#181811"
+                    android:textSize="15sp"/>
+                <ImageView
+                    android:id="@+id/refresh"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/refresh_icon"
+                    android:layout_marginRight="8dp"
+
+                    />
+                <ImageView
+                    android:id="@+id/stop"
+                    android:layout_width="24dp"
+                    android:visibility="visible"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/stop_icon"
+                    android:layout_marginRight="8dp"
+
+                    />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/nav_view"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:layout_behavior="com.example.hidebottomnavigationview.BottomNavigationViewBehavior"
+    android:background="@drawable/bottom_nav_view_top_border"
+    app:itemIconTint="#000000"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    app:elevation="0dp"
+    app:menu="@menu/bottom_nav_menu"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
