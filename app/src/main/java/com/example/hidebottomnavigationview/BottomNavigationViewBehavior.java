@@ -7,6 +7,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+//To use this class with other layout change BottomNavigationView to any layout name,ex:- LinearLayout
 public final class BottomNavigationViewBehavior extends CoordinatorLayout.Behavior<BottomNavigationView> {
     private View bottomBar;
     private View bottomToolbar;
